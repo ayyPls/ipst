@@ -1,5 +1,5 @@
 *{
-  font-family: sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 800;
   line-height: 1.2;
   color: #282c34;
@@ -70,6 +70,9 @@ a:hover{
   text-transform: uppercase;
   padding: 0 10px;
 }
+.menu a{
+  cursor: pointer;
+}
 
 .menu-block--empty{
   content: '';
@@ -89,6 +92,37 @@ a:hover{
       ". ."
       ". ."; 
   }
+
 .content-grid img{
   width: 40vh;
+}
+
+/* About.js */
+#about-image{
+  width: 50vw;
+}
+.about-content{
+  display: flex;
+  flex-direction: row;
+}
+.left-block, .right-block{
+  margin: 50px;
+}
+.left-block{
+  /* padding: 20px; */
+}
+.right-block{
+  flex-grow: 1;
+  text-align: left;
+}
+.right-block h2{
+  font-size: 4vh;
+}
+.right-block>p{
+  display: block;
+  font-weight: lighter;
+  line-height: 1.5;
+  color: #333333;
+  margin-right: 10vw;
+  font-size: 2vh;
 }

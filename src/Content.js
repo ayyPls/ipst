@@ -1,31 +1,41 @@
 import Product from "./Product";
+import React, { useState } from 'react';
+
+
+
 export default function Content(props) {
+    const productsList = [
+        {
+            id: 1,
+            mainImage: 'images/main-image.jpg',
+            secondaryImage: 'images/secondary-image.webp'
+        },
+        {
+            id: 2,
+            mainImage: 'images/main-image.jpg',
+            secondaryImage: 'images/secondary-image.webp'
+        },
+        {
+            id: 3,
+            mainImage: 'images/main-image.jpg',
+            secondaryImage: 'images/secondary-image.webp'
+        },
+        {
+            id: 4,
+            mainImage: 'images/main-image.jpg',
+            secondaryImage: 'images/secondary-image.webp'
+        },
+        {
+            id: 5,
+            mainImage: 'images/main-image.jpg',
+            secondaryImage: 'images/secondary-image.webp'
+        },
+    ]
+    const [products, setProducts] = useState(productsList);
+    const productsToRender = products.map((product) => <Product key={product.id} data={product} />)
     return (
         <div className="content-grid">
-            {/* заменить на  компоненты и передавать в них url*/}
-            <Product 
-            mainImage="https://static.tildacdn.com/tild6265-3332-4732-b062-653536633362/36D2M11.jpg" 
-            secondaryImage="https://thumb.tildacdn.com/tild3739-3634-4661-a439-316234663835/-/cover/720x720/center/center/-/format/webp/36D2M12.jpg"
-            onHover=""/>
-          <Product 
-            mainImage="https://static.tildacdn.com/tild6265-3332-4732-b062-653536633362/36D2M11.jpg" 
-            secondaryImage="https://thumb.tildacdn.com/tild3739-3634-4661-a439-316234663835/-/cover/720x720/center/center/-/format/webp/36D2M12.jpg"
-            onHover=""/><Product 
-            mainImage="https://static.tildacdn.com/tild6265-3332-4732-b062-653536633362/36D2M11.jpg" 
-            secondaryImage="https://thumb.tildacdn.com/tild3739-3634-4661-a439-316234663835/-/cover/720x720/center/center/-/format/webp/36D2M12.jpg"
-            onHover=""/><Product 
-            mainImage="https://static.tildacdn.com/tild6265-3332-4732-b062-653536633362/36D2M11.jpg" 
-            secondaryImage="https://thumb.tildacdn.com/tild3739-3634-4661-a439-316234663835/-/cover/720x720/center/center/-/format/webp/36D2M12.jpg"
-            onHover=""/><Product 
-            mainImage="https://static.tildacdn.com/tild6265-3332-4732-b062-653536633362/36D2M11.jpg" 
-            secondaryImage="https://thumb.tildacdn.com/tild3739-3634-4661-a439-316234663835/-/cover/720x720/center/center/-/format/webp/36D2M12.jpg"
-            onHover=""/><Product 
-            mainImage="https://static.tildacdn.com/tild6265-3332-4732-b062-653536633362/36D2M11.jpg" 
-            secondaryImage="https://thumb.tildacdn.com/tild3739-3634-4661-a439-316234663835/-/cover/720x720/center/center/-/format/webp/36D2M12.jpg"
-            onHover=""/><Product 
-            mainImage="https://static.tildacdn.com/tild6265-3332-4732-b062-653536633362/36D2M11.jpg" 
-            secondaryImage="https://thumb.tildacdn.com/tild3739-3634-4661-a439-316234663835/-/cover/720x720/center/center/-/format/webp/36D2M12.jpg"
-            onHover=""/>
+            {productsToRender}
         </div>
     );
 }
