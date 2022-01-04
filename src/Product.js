@@ -8,7 +8,7 @@ export default function Product(props) {
     const [imageToShow, setImage] = useState(props.data.mainImage);
     return (
         <div>
-            <Link to={'/item/'+props.data.id}>
+            <Link to={`/item/${props.data.id}`} >
             <img
                 src={imageToShow}
                 onMouseEnter={() => setImage(props.data.secondaryImage)}
