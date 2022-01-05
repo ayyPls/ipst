@@ -12,7 +12,7 @@ export default function Header() {
                         <Link to="/">Магазин</Link>
                     </li>
                     <li>
-                        <Link to="/about">О нас</Link>
+                        <Link to="/about">О бренде</Link>
                     </li>
                 </ul>
             </div>

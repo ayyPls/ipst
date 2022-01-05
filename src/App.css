@@ -1,22 +1,25 @@
+/* class container с 80vw шириной и margin 0 auto для всего контента */
+
+
 *{
   font-family: Montserrat, sans-serif;
   font-weight: 800;
   line-height: 1.2;
-  color: #282c34;
 }
 
 a{
   text-decoration: none;
+  color: #282c34;
 }
 a:hover{
-  color:dimgrey;
+  color:#61dafb;
 }
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 8vmin;
   pointer-events: none;
 }
 
@@ -50,8 +53,8 @@ a:hover{
   }
 }
 /* Header.js */
-/* потом поменять значения menu-logo и menu-block--empty на переменную? */
 .header{
+  text-align: center;
   display: flex;
   flex-direction: row;
 }
@@ -65,14 +68,15 @@ a:hover{
 .menu ul li{
   display: inline;
   list-style: none;
-  font-size: 3vh;
+  font-size: 2vh;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0 10px;
+  padding: 10px;
 }
 .menu a{
   cursor: pointer;
 }
+
 
 .menu-block--empty{
   content: '';
@@ -81,48 +85,166 @@ a:hover{
 
 /* Content.js */
 .content-grid{
-    display: grid; 
-    width: 80vw;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr; 
+  padding-bottom: 10vh;
+  display: grid; 
+  width: 80vw;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr; 
     /* grid-template-rows: 1fr 1fr 1fr; */
-    gap: 20px 20px; 
-    grid-template-areas: 
-      ". ."
-      ". ."
-      ". ."; 
-  }
+  gap: 20px 20px; 
+  grid-template-areas: 
+    ". ."
+    ". ."
+    ". ."; 
+}
 
 .content-grid img{
   width: 40vh;
 }
 
 /* About.js */
+.about-container{
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 10vh;
+}
 #about-image{
-  width: 50vw;
+  object-fit: cover;
+  /* width:230px; */
+  height: 40vw;
+  width: 40vw;
 }
 .about-content{
   display: flex;
   flex-direction: row;
 }
-.left-block, .right-block{
-  margin: 50px;
-}
-.left-block{
-  /* padding: 20px; */
-}
-.right-block{
-  flex-grow: 1;
-  text-align: left;
-}
-.right-block h2{
+/* .left-block, .right-block{
+  /* margin: 50px; */
+/* } */
+/* .left-block{ */
+  /* flex-grow: 1; */
+  /* text-align: left; */ 
+/* } */
+.left-block h2{
+  text-transform: uppercase;
   font-size: 4vh;
 }
-.right-block>p{
-  display: block;
+.left-block>p{
+  /* display: block; */
   font-weight: lighter;
   line-height: 1.5;
   color: #333333;
-  margin-right: 10vw;
+  margin-right: 5vw;
   font-size: 2vh;
+}
+
+/* ProductPage.js */
+.product-container{
+  padding: 50px;
+}
+.product-container h2, 
+.product-container h3{
+  margin: 20px 0 0 0 ;
+}
+.product-card{
+  display: flex;
+  flex-direction: row;
+}
+.product-card img{
+  height: 70vh;
+  padding: 10px 20px;
+}
+.product-info{
+  padding: 0 10vw;
+}
+.product-info h2{
+  font-size: 4vh;
+}
+.product-info p{
+  font-size: 2vh;
+  font-weight: lighter;
+}
+.product-info .price{
+  font-size: 3vh;
+  font-weight: bolder;
+}
+.primary-button button{
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  width: 10vw;
+  color: white;
+  font-size: 2vh;
+  background-color: black;
+}
+.primary-button button:hover{
+  color: black;
+  background-color: #61dafb;
+}
+/* size-list */
+.size-list{
+  margin: 20px 0;
+  display: inline-block;
+	overflow: hidden;
+}
+.size-list>div{
+  display: inline-block;
+	float: left;  
+}
+.size-list input[type=radio] {
+	display: none;
+}
+.size-list>div label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 20px;
+	border: 1px solid gray;
+	border-right: none;
+	user-select: none;
+}
+.size-list>div:last-child label {
+	border-right: 1px solid gray;
+}
+.size-list>div input[type=radio]:checked + label {
+	background: #61dafb;
+}
+/* .size-list label:hover {
+	color: black;
+} */
+.size-list>div input[type=radio]:disabled + label {
+	background: white;
+}
+/* .size-list ul{
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.size-list ul li{
+  cursor: pointer;
+  padding: 20px;
+  margin-right: 5px;
+  border: 1px solid #282c34;
+}
+.size-list ul li:hover{
+  background-color: #88e1fa;
+  border: 1px solid transparent;
+} */
+/* Footer.js */
+.footer{
+  padding: 20px 10vw;
+  background-color: #333333;
+}
+.footer>div{
+  padding: 10px;
+  color: white;
+  font-weight: lighter;
+}
+.footer a{
+  color: white;
+  margin: 10px 0;
+  display: block;
+}
+.footer a:hover{
+  color: #61dafb;
 }

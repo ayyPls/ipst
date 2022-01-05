@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { useHistory, useParams } from 'react-router-dom'
-
 export default function Product(props) {
     //hook для того, чтобы менять картнику по наведению
     const [imageToShow, setImage] = useState(props.data.mainImage);
