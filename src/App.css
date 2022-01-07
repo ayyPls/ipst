@@ -14,9 +14,6 @@ a{
 a:hover{
   color:#61dafb;
 }
-.App {
-  /* text-align: center; */
-}
 
 .App-logo {
   height: 8vmin;
@@ -54,7 +51,9 @@ a:hover{
 }
 /* Header.js */
 .header{
-  text-align: center;
+  width: 100%;
+  background-color: white;
+  position: fixed;
   display: flex;
   flex-direction: row;
 }
@@ -63,6 +62,7 @@ a:hover{
 }
 .menu ul{
   padding: 0;
+  display: flex;
   justify-content: center;
 }
 .menu ul li{
@@ -77,15 +77,20 @@ a:hover{
   cursor: pointer;
 }
 
-
-.menu-block--empty{
+.menu-block--auth{
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  justify-content: center;
   content: '';
   flex-grow: 0.1;
 }
 
+
 /* Content.js */
 .content-grid{
-  padding-bottom: 10vh;
+  padding: 10vh 0;
   display: grid; 
   width: 80vw;
   margin: 0 auto;
@@ -107,11 +112,10 @@ a:hover{
   display: flex;
   width: 80vw;
   margin: 0 auto;
-  padding-bottom: 10vh;
+  padding: 10vh 0;
 }
-#about-image{
+#square-image{
   object-fit: cover;
-  /* width:230px; */
   height: 40vw;
   width: 40vw;
 }
@@ -119,19 +123,12 @@ a:hover{
   display: flex;
   flex-direction: row;
 }
-/* .left-block, .right-block{
-  /* margin: 50px; */
-/* } */
-/* .left-block{ */
-  /* flex-grow: 1; */
-  /* text-align: left; */ 
-/* } */
+
 .left-block h2{
   text-transform: uppercase;
   font-size: 4vh;
 }
 .left-block>p{
-  /* display: block; */
   font-weight: lighter;
   line-height: 1.5;
   color: #333333;
@@ -141,7 +138,9 @@ a:hover{
 
 /* ProductPage.js */
 .product-container{
-  padding: 50px;
+  padding: 10vh 0;
+  width: 80vw;
+  margin: 0 auto;
 }
 .product-container h2, 
 .product-container h3{
@@ -209,27 +208,10 @@ a:hover{
 .size-list>div input[type=radio]:checked + label {
 	background: #61dafb;
 }
-/* .size-list label:hover {
-	color: black;
-} */
+
 .size-list>div input[type=radio]:disabled + label {
 	background: white;
 }
-/* .size-list ul{
-  padding: 0;
-  display: flex;
-  list-style: none;
-}
-.size-list ul li{
-  cursor: pointer;
-  padding: 20px;
-  margin-right: 5px;
-  border: 1px solid #282c34;
-}
-.size-list ul li:hover{
-  background-color: #88e1fa;
-  border: 1px solid transparent;
-} */
 /* Footer.js */
 .footer{
   padding: 20px 10vw;
@@ -247,4 +229,34 @@ a:hover{
 }
 .footer a:hover{
   color: #61dafb;
+}
+
+/* LoginPagejs */
+.container{
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 10vh 0;
+}
+.container form{
+  display: flex;
+  flex-direction: column;
+}
+.container form input{
+  font-size: 3vh;
+}
+.container form > input{
+  margin: 10px 0;
+  border: 1px solid black;
+  width: 30vw;
+  height: 4vh;
+}
+.container .left-block>div{
+  margin-right: 9.7vw;
+}
+.container form button{
+  margin: 10px 0;
+}
+span.error{
+  color: red;
 }

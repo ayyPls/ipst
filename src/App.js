@@ -1,20 +1,20 @@
 import './App.css';
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
-import { Routes, Route } from 'react-router-dom'
-import Product from './Product';
-import PageNotFound from './PageNotFound';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
-import ProductPage from './ProductPage';
+import ProductPage from './components/ProductPage';
+import LoginPage from './components/LoginPage';
 export default function App() {
   const products = useSelector(state => state.products)
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route exact path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/item/:id" element={<ProductPage />} />
+      <Route path="/login" element={<LoginPage />} />
       {/* если url не совпаадет ни с одним из списка? */}
-      <Route component={PageNotFound} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }

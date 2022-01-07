@@ -14,7 +14,7 @@ export default function About(props) {
                     </p>
                 </div>
                 <div className="right-block">
-                    <img src="images/about-us.jpg" alt="about-us" id="about-image" />
+                    <img src="images/about-us.jpg" alt="about-us" id="square-image" />
                 </div>
             </div>
 
