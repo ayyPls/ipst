@@ -7,10 +7,12 @@ import { Navigate } from 'react-router';
 export default function LoginPage() {
     //условие для редиректа
     const user = useSelector(state => state.user)
-    if (user)
+    if (user) {
+        console.log('looged in')
         return (
             <Navigate to="/" />
         )
+    }
     else return (<div className="App">
         <Header />
         <LoginForm />

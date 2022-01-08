@@ -14,7 +14,7 @@ export const reducer = (state = defaultState, action) => {
         case GET_USER:
             return { ...state, user: action.payload }
         case LOG_OUT:
-            return { ...state, user: null }
+            return { ...state, user: action.payload, token: '' }
         default:
             return state
     }
