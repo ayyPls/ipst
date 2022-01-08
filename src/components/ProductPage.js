@@ -44,7 +44,7 @@ export default function ProductPage() {
                         </div>
                     </div>
                     <HeadingSmall size="2vh">Цена</HeadingSmall>
-                    <TextBlock fontWeight="bold">
+                    <TextBlock fontWeight="bold" size="4vh">
                         {productInfo.price} ₽
                     </TextBlock>
                     <Button >Купить</Button>

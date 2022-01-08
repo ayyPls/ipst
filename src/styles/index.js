@@ -32,8 +32,8 @@ export const TextBlock = styled.p`
 font-weight: ${props => props.fontWeight || 'lighter'};
 line-height: 1.5;
 color: #333333;
-margin-right: 5vw;
-font-size: 2vh;
+margin: 0 5vh 0 0;
+font-size: ${props => props.size || '2vh'};
 `
 
 export const Button = styled.button`
