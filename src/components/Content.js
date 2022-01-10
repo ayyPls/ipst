@@ -1,7 +1,7 @@
 import Product from "./Product";
 import React from 'react';
 import { useSelector } from "react-redux";
-import { GridContainer } from "../styles";
+import { GridContainer } from "../styles/styled-components";
 
 
 export default function Content() {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAuthToken } from "../store/getAuthToken";
-import { Button, HeadingLarge, Image, Container, FlexBlock, Form, Input } from "../styles";
+import { Button, HeadingLarge, Image, Container, FlexBlock, Form, Input, ErrorBlock } from "../styles/styled-components";
 
 export default function LoginForm() {
     const [username, setUsername] = useState('');
@@ -21,7 +21,7 @@ export default function LoginForm() {
                     <Input id="login" type="text" value={username} onChange={(event) => setUsername(event.target.value)} />
                     <label htmlFor="password">Пароль</label>
                     <Input id="password" type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
-                    {useSelector(state => state.token.error) ? <span className="error">wrong email or password</span> : ''}
+                    {useSelector(state => state.token.error) ? <ErrorBlock>wrong email or password</ErrorBlock> : ''}
                     <Button onClick={(event) => submitLogin(event)}>Войти</Button>
                 </Form>
             </FlexBlock>

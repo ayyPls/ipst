@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Image } from '../styles';
+import { Image, GridBlock } from '../styles/styled-components';
 export default function Product(props) {
     const [imageToShow, setImage] = useState(props.data.mainImage);
     return (
-        <div>
+        <GridBlock>
             <Link to={`/item/${props.data.id}`} >
-                <Image width="40vh"
-                src={imageToShow} 
-                onMouseEnter={() => setImage(props.data.secondaryImage)} 
-                onMouseLeave={() => setImage(props.data.mainImage)} />
+                <Image width="25vw"
+                    src={imageToShow}
+                    onMouseEnter={() => setImage(props.data.secondaryImage)}
+                    onMouseLeave={() => setImage(props.data.mainImage)} />
             </Link>
-        </div>
+        </GridBlock>
     );
 }

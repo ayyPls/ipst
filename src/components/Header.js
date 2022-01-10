@@ -2,7 +2,7 @@ import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LOG_OUT } from '../store/actions';
-import { Image, LogoutButton, LoginMenu } from '../styles';
+import { Image, LogoutButton, LoginMenu, HeaderBlock, HeaderContainer, MenuItem } from '../styles/styled-components';
 
 export default function Header() {
     const user = useSelector(state => state.user)
@@ -15,32 +15,29 @@ export default function Header() {
         event.preventDefault();
     }
     return (
-        <div className="header">
-            <div className="menu-logo">
+        <HeaderContainer>
+            <HeaderBlock>
                 <Image src={logo} height="8vmin"></Image>
-            </div>
-            <div className="menu">
+            </HeaderBlock>
+            <HeaderBlock flexGrow='1'>
                 <ul>
-                    <li>
+                    <MenuItem>
                         <Link to="/">Магазин</Link>
-                    </li>
-                    <li>
+                    </MenuItem>
+                    <MenuItem>
                         <Link to="/about">О бренде</Link>
-                    </li>
+                    </MenuItem>
                 </ul>
-            </div>
-            <div className="menu-block--auth">
+            </HeaderBlock>
+            <HeaderBlock flexGrow='0.1' uppercase fontSize='2vh'>
                 {user ?
-                    // <div>
                     <LoginMenu>
-                        {user.firstName} {user.lastName}
-                        <LogoutButton onClick={event => logout(event)} > <Image width="1vw" src="logout.png" /> </LogoutButton>
+                        {user.firstName} {user.lastName} 
+                        <LogoutButton onClick={event => logout(event)} > <Image height="2vh" src="/logout.png" /> </LogoutButton>
                     </LoginMenu>
                     :
                     <Link to='/login'>Вход</Link>
                 }
-
-            </div>
-        </div>
-    );
+            </HeaderBlock>
+        </HeaderContainer>);
 }

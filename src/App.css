@@ -1,60 +1,11 @@
-
-*{
-  font-family: Montserrat, sans-serif;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-a{
-  cursor: pointer;
-  text-decoration: none;
-  color: #282c34;
-}
-a:hover{
-  color:#61dafb;
-}
-
-/* Header.js */
-.header{
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-}
-.menu{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow:1;
-}
-.menu ul li{
-  display: inline;
-  list-style: none;
-  font-size: 2vh;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px;
-}
-
-.menu-block--auth{
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  content: '';
-  flex-grow: 0.1;
-}
-
-/* size-list */
+/* Styles for Size list on product page */
 .size-list{
-  margin: 20px 0;
+  margin: 10px 0;
   display: inline-block;
 	overflow: hidden;
 }
 .size-list>div{
   display: inline-block;
-	float: left;  
 }
 .size-list input[type=radio] {
 	display: none;
@@ -62,10 +13,12 @@ a:hover{
 .size-list>div label {
 	display: inline-block;
 	cursor: pointer;
-	padding: 20px;
+	padding: 10px;
 	border: 1px solid gray;
 	border-right: none;
 	user-select: none;
+  width: 2vw;
+  text-align: center;
 }
 .size-list>div:last-child label {
 	border-right: 1px solid gray;
@@ -76,26 +29,4 @@ a:hover{
 
 .size-list>div input[type=radio]:disabled + label {
 	background: white;
-}
-
-/* Footer.js */
-.footer{
-  padding: 20px 10vw;
-  background-color: #333333;
-}
-.footer>div{
-  padding: 10px;
-  color: white;
-  font-weight: lighter;
-}
-.footer a{
-  color: white;
-  margin: 10px 0;
-  display: block;
-}
-.footer a:hover{
-  color: #61dafb;
-}
-span.error{
-  color: red;
 }

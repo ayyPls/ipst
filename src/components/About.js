@@ -1,4 +1,4 @@
-import { HeadingLarge, Image, Container, FlexBlock, TextBlock } from "../styles"
+import { HeadingLarge, Image, Container, FlexBlock, TextBlock } from "../styles/styled-components"
 
 export default function About() {
     return (

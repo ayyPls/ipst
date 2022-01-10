@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
-import { Button, Container, HeadingLarge, HeadingSmall, Image, FlexBlock, TextBlock } from '../styles'
+import { Button, Container, HeadingLarge, HeadingSmall, Image, FlexBlock, TextBlock } from '../styles/styled-components'
 
 export default function ProductPage() {
     //get current product id
@@ -14,8 +14,8 @@ export default function ProductPage() {
             <Container>
                 <FlexBlock>
                     <div>
-                        <Image src={productInfo.mainImage} height="70vh"></Image>
-                        <Image src={productInfo.secondaryImage} height="70vh"></Image>
+                        <Image src={productInfo.mainImage} width="35vw"></Image>
+                        <Image src={productInfo.secondaryImage} width="35vw"></Image>
                     </div>
                 </FlexBlock>
                 <FlexBlock padding="0 10vh">
