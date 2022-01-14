@@ -1,21 +1,16 @@
 import { getUserData } from "./getUserData"
-import { getAuthTokenAction } from "../store/reducer"
-import axios from "axios"
+import { api } from "."
 
 export const getAuthToken = (email, password) => {
     return function (dispatch) {
-        axios.post('https://api.englishpatient.org/login',
-            {
-                "email": email,
-                "password": password
-            },
-            {
-                headers: { 'Content-Type': 'application/json' }
-            }).then(
-                response => {
-                    dispatch(getAuthTokenAction(response.data))
-                    dispatch(getUserData(response.data.token))
-                }
-            )
+        api.post('/login', {
+            'email': email,
+            'password': password
+        }).then(
+            response => {
+                localStorage.setItem('token', response.data.token)
+                dispatch(getUserData(response.data.token))
+            }
+        )
     }
 }

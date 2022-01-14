@@ -32,7 +32,7 @@ export default function Header() {
             <HeaderBlock flexGrow='0.1' uppercase fontSize='2vh'>
                 {user ?
                     <LoginMenu>
-                        {user.firstName} {user.lastName} 
+                        {user.firstName} {user.lastName}
                         <LogoutButton onClick={event => logout(event)} > <Image height="2vh" src="/logout.png" /> </LogoutButton>
                     </LoginMenu>
                     :
