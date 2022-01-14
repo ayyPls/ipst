@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAuthToken } from "../store/getAuthToken";
+import { getAuthToken } from "../api/getAuthToken";
 import { Button, HeadingLarge, Image, Container, FlexBlock, Form, Input, ErrorBlock } from "../styles/styled-components";
 
 export default function LoginForm() {

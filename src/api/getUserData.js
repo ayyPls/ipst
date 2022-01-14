@@ -1,4 +1,4 @@
-import { getUserAction } from "./reducer"
+import { getUserAction } from "../store/reducer"
 import axios from "axios"
 
 export const getUserData = (token) => {

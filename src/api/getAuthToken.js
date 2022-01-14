@@ -1,5 +1,5 @@
 import { getUserData } from "./getUserData"
-import { getAuthTokenAction } from "./reducer"
+import { getAuthTokenAction } from "../store/reducer"
 import axios from "axios"
 
 export const getAuthToken = (email, password) => {
